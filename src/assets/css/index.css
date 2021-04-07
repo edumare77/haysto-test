@@ -34,42 +34,13 @@
         width: 100%;
     }
 
-    .header-overlay{
-        position: fixed; 
-       bottom: 0; 
-       background: rgb(0, 0, 0);
-       background: rgba(0, 0, 0, 0.5); /* Black see-through */
-       color: #f1f1f1; 
-       width: 100%;
-       transition: .5s ease;
-       opacity:0;
-     height: 100%;
-     }
+    
 
      .z-10 {
         z-index: 10;
     }
 
-     #page-overlay {
-         z-index: -10;
-        position: fixed;
-        top: 4.5rem;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(0,0,0,.35);
-    }
-
-     .nav-link--1:hover ~ #page-overlay{
-        display: flex;
-     }
-
-     .dropdown:hover + #page-overlay{
-        display: flex;
-    }
-    .dropdown:hover ~ #page-overlay{
-        display: flex;
-    }
+     
 
     
     @media (min-width: 768px) {

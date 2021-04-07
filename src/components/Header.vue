@@ -344,6 +344,21 @@
     position: absolute;
     }
 
+    #page-overlay {
+         z-index: -10;
+        position: fixed;
+        top: 4.5rem;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0,0,0,.35);
+    }
+
+    
+    .dropdown:hover ~ #page-overlay{
+        display: flex;
+    }
+
     @media (min-width: 1024px){
         .menu-level--1:before {
             width: 100%;
@@ -357,111 +372,93 @@
 
 @media (min-width: 768px) {
 
-.nav-link--2 {
-    display: flex;
-    padding-left: .5rem;
-    position: relative;
-    margin-bottom: .25rem;
-    font-weight: 700;
-    --text-opacity: 1;
-    color: #593ee6;
-    color: rgba(89,62,230,var(--text-opacity));
-}
+    .nav-link--2 {
+        display: flex;
+        padding-left: .5rem;
+        position: relative;
+        margin-bottom: .25rem;
+        font-weight: 700;
+        --text-opacity: 1;
+        color: #593ee6;
+        color: rgba(89,62,230,var(--text-opacity));
+    }
 
-.menu-level--1:before {
-    content: "";
-    position: absolute;
-    height: .25rem;
-    left: 0;
-    width: 100%;
-    --bg-opacity: 1;
-    background-color: #f4f4f4;
-    background-color: rgba(244,244,244,var(--bg-opacity));
-    top: -4px;
-}
-*, :after, :before {
-    box-sizing: border-box;
-    border: 0 solid #e2e8f0;
-}
-
-.nav-item--2 {
-    padding-right: .75rem;
-    font-size: 1rem;
-    line-height: 2;
-}
-}
-
-@media (min-width: 768px) {
-.menu-level--1:after {
-    content: "";
-    height: 100%;
-    top: 0;
-    width: 400%;
-    left: -200%;
-    z-index: -1;
-}
-}
-
-@media (min-width: 768px) {
-.menu-level--1, .menu-level--1:after {
-    --bg-opacity: 1;
-    background-color: #fff;
-    background-color: rgba(255,255,255,var(--bg-opacity));
-    position: absolute;
-}
-*, :after, :before {
-    box-sizing: border-box;
-    border: 0 solid #e2e8f0;
-}
-}
-
-
-@media (min-width: 768px) {
-.nav-item--1:hover .nav-link--1:after {
-    content: "";
-    --bg-opacity: 1;
-    background-color: #593ee6;
-    background-color: rgba(89,62,230,var(--bg-opacity));
-    height: .25rem;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-}
-*, :after, :before {
-    box-sizing: border-box;
-    border: 0 solid #e2e8f0;
-}
-}
-
-
-@media (min-width: 768px) {
-.nav-link--1:hover:after {
-    content: "";
-    --bg-opacity: 1;
-    background-color: #593ee6;
-    background-color: rgba(89,62,230,var(--bg-opacity));
-    height: .25rem;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-}
-
-
-.menu-level--1 {
-    justify-content: space-between;
-    width: 100vh;
-    top: 70px;
+    .menu-level--1:before {
+        content: "";
+        position: absolute;
+        height: .25rem;
+        left: 0;
+        width: 100%;
+        --bg-opacity: 1;
+        background-color: #f4f4f4;
+        background-color: rgba(244,244,244,var(--bg-opacity));
+        top: -4px;
+    }
     
-}
-.container-main {
-    max-width: 1040px;
+
+    .nav-item--2 {
+        padding-right: .75rem;
+        font-size: 1rem;
+        line-height: 2;
+    }
+    .nav-link--1:hover:after {
+        content: "";
+        --bg-opacity: 1;
+        background-color: #593ee6;
+        background-color: rgba(89,62,230,var(--bg-opacity));
+        height: .25rem;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+    }
+
+
+    .menu-level--1 {
+        justify-content: space-between;
+        width: 100vh;
+        top: 70px;
+        
+    }
+    .container-main {
+        max-width: 1040px;
+    }
+    .menu-level--1:after {
+        content: "";
+        height: 100%;
+        top: 0;
+        width: 400%;
+        left: -200%;
+        z-index: -1;
+    }
+    .nav-item--1:hover .nav-link--1:after {
+        content: "";
+        --bg-opacity: 1;
+        background-color: #593ee6;
+        background-color: rgba(89,62,230,var(--bg-opacity));
+        height: .25rem;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+    }
+    *, :after, :before {
+        box-sizing: border-box;
+        border: 0 solid #e2e8f0;
+    }
+    .menu-level--1, .menu-level--1:after {
+        --bg-opacity: 1;
+        background-color: #fff;
+        background-color: rgba(255,255,255,var(--bg-opacity));
+        position: absolute;
+    }
+   
 }
 
-}
+
+
 
 
 
